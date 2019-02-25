@@ -75,7 +75,7 @@ def build_classifier(optimizer):
     return classifier
 classifier = KerasClassifier(build_fn = build_classifier)
 parameters = {'batch_size': [25, 32],
-              'epochs': [100, 500],
+              'epochs': [100, 800],
               'optimizer': ['adam', 'rmsprop']}
 grid_search = GridSearchCV(estimator = classifier,
                            param_grid = parameters,
